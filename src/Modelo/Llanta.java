@@ -26,6 +26,6 @@ public class Llanta {
     }
     
     public void mover(){
-        
+        x++;
     }
 }

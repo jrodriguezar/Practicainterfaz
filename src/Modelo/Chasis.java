@@ -26,6 +26,6 @@ public class Chasis {
     }
     
     public void mover(){
-        
+        x++;
     }
 }

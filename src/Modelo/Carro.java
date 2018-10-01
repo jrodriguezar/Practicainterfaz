@@ -32,9 +32,13 @@ public class Carro {
     public int getY() {
         return y;
     }
-
-    public Llanta[] getLlantas() {
+    
+    public Llanta[] getllantas(){
         return llantas;
+    }
+
+    public Llanta getLlantas(int i) {
+        return llantas[i];
     }
 
     public Chasis getChasis() {
@@ -43,5 +47,10 @@ public class Carro {
     
     public void mover(){
         this.x++;
+    }
+    
+    public void moverllanta(){
+        llantas[0].mover();
+        llantas[1].mover();
     }
 }

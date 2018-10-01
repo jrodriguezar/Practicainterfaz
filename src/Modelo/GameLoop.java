@@ -16,9 +16,13 @@ public class GameLoop extends AnimationTimer{
     public void handle(long l) {
         //Borrando el tablero
         gc.clearRect(0, 0, 300, 300);
-        double xpoints[] = {this.carro.getX(), this.carro.getX()+10, this.carro.getX()+12, this.carro.getX()+30};
-        double ypoints[] = {this.carro.getY(), this.carro.getY(), this.carro.getY()-15, this.carro.getY()-15};
-        
-        this.carro.mover();
+        double xpoints[] = {carro.getChasis().getX(), carro.getChasis().getX()+12, carro.getChasis().getX()+17, carro.getChasis().getX()+35, carro.getChasis().getX()+40, carro.getChasis().getX()+50, carro.getChasis().getX()+50, carro.getChasis().getX(), carro.getChasis().getX()};
+        double ypoints[] = {carro.getChasis().getY(), carro.getChasis().getY(), carro.getChasis().getY()-15, carro.getChasis().getY()-15, carro.getChasis().getY(), carro.getChasis().getY(), carro.getChasis().getY()+8, carro.getChasis().getY()+8, carro.getChasis().getY()};
+        gc.strokePolygon(xpoints, ypoints, xpoints.length);
+        gc.fillOval(carro.getLlantas(0).getX()+12, carro.getLlantas(0).getY()+8, 8, 8);
+        gc.fillOval(carro.getLlantas(1).getX()+32, carro.getLlantas(1).getY()+8, 8, 8);
+        carro.mover();
+        carro.getChasis().mover();
+        carro.moverllanta();
     }
 }
