@@ -46,7 +46,9 @@ public class Carro {
     }
     
     public void mover(){
-        this.x++;
+        llantas[0].mover();
+        llantas[1].mover();
+        chasis.mover();
     }
     
     public void moverllanta(){

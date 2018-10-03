@@ -22,7 +22,5 @@ public class GameLoop extends AnimationTimer{
         gc.fillOval(carro.getLlantas(0).getX()+12, carro.getLlantas(0).getY()+8, 8, 8);
         gc.fillOval(carro.getLlantas(1).getX()+32, carro.getLlantas(1).getY()+8, 8, 8);
         carro.mover();
-        carro.getChasis().mover();
-        carro.moverllanta();
     }
 }
